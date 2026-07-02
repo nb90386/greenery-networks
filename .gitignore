@@ -1,0 +1,39 @@
+node_modules
+.next
+out
+.env
+.env.local
+.DS_Store
+assets/raw-photos/*.zip
+assets/raw-photos/**/*.HEIC
+assets/raw-photos/**/*.MOV
+
+# Raw plant photo imports
+public/images/plants/_raw/
+public/images/plants/*.zip
+
+# Vercel
+.vercel
+
+# Playwright test artifacts
+.playwright-mcp/
+phase1-*.png
+mobile-*.png
+tablet-*.png
+final-*.png
+hero-*.png
+shop-*.png
+pdp-*.png
+cart-*.png
+care-*.png
+about-*.png
+shipping-*.png
+contact-*.png
+s-*.png
+v3-*.png
+collection-*.png
+missing-image-fallback.png
+seedling-zoom.png
+*.zip
+tsconfig.tsbuildinfo
+.playwright-mcp/
