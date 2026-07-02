@@ -47,22 +47,25 @@ Confirm the repo is visible in GitHub.
 We keep NameSilo's nameservers so other records (email, etc.) are preserved.
 
 1. Log in at <https://www.namesilo.com>.
-2. **Domain Manager**, click the domain.
+2. **Domain Manager**, click `greenerynetworks.com`.
 3. Open **DNS Records** (sometimes labeled DNS Manager or Manage DNS).
 4. Make these changes:
-   - Delete any existing parked or default `A` record on host `@` that
-     NameSilo created.
-   - Delete any auto created `A` record on host `www` so it will not
+   - **Delete** the existing parked `A` record on host `@` (currently
+     `91.195.240.123`, a NameSilo parking IP).
+   - **Delete** any auto created `A` record on host `www` so it will not
      conflict with the new `CNAME`.
-   - Add an **A** record:
-     - Host: `@`
-     - Value: `76.76.21.21` (or the IP Vercel showed you)
-     - TTL: `Automatic` (or `3600`)
-   - Add a **CNAME** record:
-     - Host: `www`
-     - Value: `cname.vercel-dns.com`
-     - TTL: `Automatic` (or `3600`)
+   - **Add two `A` records for the apex** (Vercel currently prefers these
+     rank 1 IPs; `76.76.21.21` still works as a fallback if you can only
+     add one record):
+     - Host: `@`, Value: `216.150.1.1`, TTL: `3600`
+     - Host: `@`, Value: `216.150.16.1`, TTL: `3600`
+   - **Add a `CNAME` for www**:
+     - Host: `www`, Value: `cname.vercel-dns.com`, TTL: `3600`
 5. Save.
+
+The current live vercel.app URL is
+<https://greenery-networks.vercel.app> if you want to verify anything
+before DNS switches over.
 
 ## 5. Wait for verification and SSL in Vercel
 
