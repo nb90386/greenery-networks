@@ -20,6 +20,13 @@ const nextConfig = {
       // /plant-care was the original path; /care is the canonical home now.
       { source: "/plant-care", destination: "/care", permanent: true },
       { source: "/plant-care/:path*", destination: "/care/:path*", permanent: true },
+      // Canonicalize www to the apex so the domain has one true home.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.greenerynetworks.com" }],
+        destination: "https://greenerynetworks.com/:path*",
+        permanent: true,
+      },
     ];
   },
 };
