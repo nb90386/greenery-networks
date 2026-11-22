@@ -2,7 +2,7 @@
 
 A garden-inspired e-commerce website for live flowering plants, built with a focus on straightforward shopping and a polished, welcoming visual experience.
 
-> **Project:** Private storefront codebase. A deployed website or UI does not, by itself, confirm that inventory, payment processing, and shipping are production-ready.
+> **Project:** Storefront codebase. A deployed website or UI does not, by itself, confirm that inventory, payment processing, and shipping are production-ready.
 
 ## Project goals
 
